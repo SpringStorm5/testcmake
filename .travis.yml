@@ -1,21 +1,15 @@
 sudo: required
-install:
-    - script ./travis/install-linux.sh
-    - cd ..
-    - pwd
-language: cpp
-
-compiler:
-  - gcc
-
-build:
-    - script ./build.sh
-os:
-- linux
-
-branches:
-  only:
-  - master
+# Enable C++ support
+ language: cpp
+ # Compiler selection
+ compiler:
+   - clang
+    - gcc
+     # Build steps
+     script:
+       - mkdir build
+         - cd build
+           - cmake .. && make
 
 deploy:
   provider: releases
