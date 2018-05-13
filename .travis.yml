@@ -1,16 +1,15 @@
-install:
+sudo: required
+before_install:
     - script ./travis/install-linux.sh
     - source ./travis/install-linux.sh: 
+language: cpp
+compiler:
+  - gcc
+script: pwd
+- cd ..
+script: pwd
 build:
     - script: ./travis/build.sh
-language: cpp
-  addons:
-    apt:
-      update: true
-sudo: required
-dist: trusty
-compiler:
-- gcc
 os:
 - linux
 branches:
