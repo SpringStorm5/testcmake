@@ -32,8 +32,8 @@ install:
  
 deploy:
   provider: releases
-  api_key: "81264abad3aa08034b327bff23002217c969bf0d"
-  file: "README.MD"
+  api_key: $GITHUB_TOKEN
+  file: "main"
   skip_cleanup: true
   on:
     tags: true
