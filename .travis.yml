@@ -21,8 +21,8 @@ addons:
     - llvm-toolchain-precise-3.6
     packages:
     # install toolchains
-    - gcc-8
-    - g++-8
+    - gcc-5
+    - g++-5
 
 deploy:
   provider: releases
