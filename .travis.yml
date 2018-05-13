@@ -1,7 +1,11 @@
 sudo: required
 before_install:
     - script ./travis/install-linux.sh
-    - source ./travis/install-linux.sh: 
+script:
+    # скрипт сборки и тестирования проекта:
+    - mkdir build
+    - cd build
+    - cmake ../
 language: cpp
 compiler:
   - gcc
