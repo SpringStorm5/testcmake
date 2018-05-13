@@ -25,10 +25,16 @@ addons:
     - gcc-6
     - g++-6
 
-
+install:
+    # скрипт настройки среды и установки зависимостей:
+    - source ./install-linux.sh	
 
 before_deploy:
-	- git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
+  # Set up git user name and tag this commit
+  - git config --local user.name "SpringStorm5"
+  - git config --local user.email "springstorm666@gmail.com"
+  - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
+
     
 deploy:
   provider: releases
