@@ -8,7 +8,7 @@ script: pwd
 - cd ..
 script: pwd
 build:
-    - script: ./build.sh
+    - script ./build.sh
 os:
 - linux
 
