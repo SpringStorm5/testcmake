@@ -19,3 +19,12 @@ os:
 branches:
   only:
   - master
+
+deploy:
+  provider: releases
+  api_key: "81264abad3aa08034b327bff23002217c969bf0d"
+  file: "README.MD"
+  skip_cleanup: true
+  on:
+    tags: true
+
