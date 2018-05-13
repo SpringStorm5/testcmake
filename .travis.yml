@@ -2,6 +2,9 @@ install:
     - script ./travis/install-linux.sh
     - source ./travis/install-linux.sh: 
 language: cpp
+  addons:
+    apt:
+      update: true
 sudo: required
 dist: trusty
 compiler:
@@ -11,4 +14,4 @@ os:
 branches:
   only:
   - master
-script: ./build.sh
+script: ./travis/build.sh
