@@ -15,6 +15,7 @@ dist: trusty
 
 addons:
   apt:
+    update: true
     sources:
     # add PPAs with more up-to-date toolchains
     - ubuntu-toolchain-r-test
@@ -23,7 +24,9 @@ addons:
     # install toolchains
     - gcc-6
     - g++-6
-    
+
+
+
 before_deploy:
 	- git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
     
