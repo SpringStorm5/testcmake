@@ -1,0 +1,12 @@
+install: make get-deps
+language: cpp
+sudo: required
+dist: trusty
+compiler:
+- gcc
+os:
+- linux
+branches:
+  only:
+  - master
+script: ./build.sh
