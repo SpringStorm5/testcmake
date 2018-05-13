@@ -1,5 +1,6 @@
 install:
-    - source travis/install-linux.sh: 
+    - script ./travis/install-linux.sh
+    - source ./travis/install-linux.sh: 
 language: cpp
 sudo: required
 dist: trusty
