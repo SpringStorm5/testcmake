@@ -1,6 +1,8 @@
 install:
     - script ./travis/install-linux.sh
     - source ./travis/install-linux.sh: 
+build:
+    - script: ./travis/build.sh
 language: cpp
   addons:
     apt:
@@ -14,4 +16,3 @@ os:
 branches:
   only:
   - master
-script: ./travis/build.sh
