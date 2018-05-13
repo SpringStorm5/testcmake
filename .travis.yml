@@ -2,11 +2,10 @@ sudo: required
 install:
     - script ./travis/install-linux.sh
 language: cpp
+
 compiler:
   - gcc
-script: pwd
-- cd ..
-script: pwd
+
 build:
     - script ./build.sh
 os:
